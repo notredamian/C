@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+long long int factorial(int num) {
+    if (num == 0 || num == 1)
+        return 1;
+    else
+        return num * factorial(num - 1);
+}
+
+int main() {
+    int M, N;
+
+    while (scanf("%d %d", &M, &N) != EOF) {
+        long long int sum = factorial(M) + factorial(N);
+        printf("%lld\n", sum);
+    }
+
+    return 0;
+}
